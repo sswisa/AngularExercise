@@ -1,0 +1,78 @@
+@import '../../styles/colors';
+
+:host{
+  width: 100%;
+  height: 100%;
+  color: $c5;
+
+  .container, nav {
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  nav{
+    padding-top: 150px;
+  }
+
+  ul{
+    padding: 0;
+  }
+
+  li{
+    display: inline-block;
+    list-style: none;
+    cursor: pointer;
+
+    &:nth-child(2){
+      padding-left: 15px;
+    }
+
+    &:hover{
+      text-decoration: underline;
+      color: $c1;
+    }
+  }
+
+  h1{
+    color: $c5;
+    font-size: 25px;
+    padding-bottom: 15px;
+  }
+
+  select{
+    outline: 0;
+    width: calc(100% + #{10px});
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 5px;
+    border: none;
+    background-color: $c3;
+    padding: 5px 12px;
+    color: $c5;
+  }
+
+  input{
+    &:not(:first-child){
+      margin-top: 5px;
+    }
+
+    &[type='submit']{
+      margin-top: 5px;
+      height: 40px;
+      width: calc(100% + #{10px});
+      cursor: pointer;
+      &:hover{
+        background-color: $c7;
+      }
+    }
+
+    width: calc(100% - #{20px});
+    padding: 5px 15px;
+    background-color: $c3;
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    color: $c5;
+  }
+}

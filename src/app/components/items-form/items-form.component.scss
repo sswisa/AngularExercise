@@ -1,0 +1,63 @@
+:host{
+  .main{
+    background-color: #FFF;
+    width: 300px;
+    padding-bottom: 1px;
+  }
+
+  .add-item{
+    margin: 15px;
+  }
+
+  button{
+    height: 31px;
+  }
+
+  input{
+    width: 74%;
+    height: 27px;
+    padding: 0 10px;
+  }
+
+  h1{
+    display: block;
+    height: 70px;
+    background-color: #5A7F9A;
+    font-size: 25px;
+    color: #FFF;
+    line-height: 70px;
+    text-align: center;
+  }
+
+  ul{
+    padding: 0;
+
+    li{
+      background-color: #F5F4F6;
+      display: inline-block;
+      list-style: none;
+      height: 35px;
+      line-height: 35px;
+      margin-top: 5px;
+      width: 100%;
+      text-align: center;
+      color: #9E9D9D;
+      font-size: 15px;
+    }
+
+    p{
+      display: inline-block;;
+    }
+
+    span{
+      float: right;
+      padding-right: 5px;
+      cursor: pointer;
+      margin: 0 auto;
+
+      &:hover{
+        color: #000;
+      }
+    }
+  }
+}

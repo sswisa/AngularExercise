@@ -1,0 +1,29 @@
+<form [formGroup]="baseConverter">
+  <input
+    type="text"
+    (ngModelChange)="decimalChanged(oldValue, $event); oldValue=$event"
+    name="decimal"
+    placeholder="decimal"
+    formControlName="decimal"/>
+
+  <input
+    type="text"
+    (ngModelChange)="binaryChanged(oldValue, $event); oldValue=$event"
+    name="binary"
+    placeholder="binary"
+    formControlName="binary"/>
+
+  <input
+    type="text"
+    (ngModelChange)="octalChanged(oldValue, $event); oldValue=$event"
+    name="octal"
+    placeholder="octal"
+    formControlName="octal"/>
+
+  <input
+    type="text"
+    (ngModelChange)="hexaChanged(oldValue, $event); oldValue=$event"
+    name="hexa"
+    placeholder="hexa"
+    formControlName="hexa"/>
+</form>

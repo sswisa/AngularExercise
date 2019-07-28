@@ -1,0 +1,46 @@
+@import '../../styles/colors';
+
+:host{
+  display: flex;
+  clear: both;
+
+  .widget{
+    padding: 25px;
+    margin: 5px;
+    background-color: $c5;
+    color: $c4;
+  }
+
+  h1{
+    padding-bottom: 10px;
+  }
+
+  nav {
+    display: flex;
+    width: 300px;
+  }
+
+  li {
+    list-style: none;
+    font-size: 15px;
+    color: rgba(#FFF, 0.5);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover{
+      color: rgba(#FFF, 1);
+    }
+  }
+
+  .panels-wrapper {
+    color: rgba(#FFF, 0.5);
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .panel {
+    margin: 50px 50px;
+    display: inline-block;
+  }
+
+}

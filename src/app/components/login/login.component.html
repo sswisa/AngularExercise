@@ -1,0 +1,34 @@
+<nav>
+  <ul>
+    <li (click)="formType='template'">Template</li>
+    <li (click)="formType='model'">Model</li>
+  </ul>
+</nav>
+
+<form *ngIf="formType=='template'" class="container" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm.value)">
+  <h1>Template driven login form</h1>
+  <input type="text" name="firstname" placeholder="Firstname" ngModel>
+  <input type="text" name="lastname" placeholder="Lastname" ngModel>
+  <input type="text" name="username" placeholder="Username" ngModel>
+  <input type="password" name="password" placeholder="Password" ngModel>
+  <select name="languages" ngModel>
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="Angular">Angular</option>
+  </select>
+  <input type="submit" value="Submit">
+</form>
+
+<form *ngIf="formType=='model'" class="container" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <h1>Model driven login form</h1>
+  <input type="text" name="firstname" placeholder="Firstname" formControlName="firstname">
+  <input type="text" name="lastname" placeholder="Lastname" formControlName="lastname">
+  <input type="text" name="username" placeholder="Username" formControlName="username">
+  <input type="password" name="password" placeholder="Password" formControlName="password">
+  <select name="languages" formControlName="languages">
+    <option value="C++">C++</option>
+    <option value="Java">Java</option>
+    <option value="Angular">Angular</option>
+  </select>
+  <input type="submit" [disabled]="!loginForm.valid" value="Submit">
+</form>

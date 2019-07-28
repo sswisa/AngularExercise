@@ -1,0 +1,7 @@
+@import './styles/settings';
+
+:host{
+  .router-outlet-wrap{
+    //height: calc(100% - #{$mainHeaderHeight});
+  }
+}
